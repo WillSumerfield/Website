@@ -9,6 +9,8 @@
 </head>
 
 <body style="background-color: #1d3557">
+    <script type="module" src="../node_modules/three/src/Three.js"></script>
+    <script type="module" src="../javascript/webapp.js"></script>
 
     <nav class="navbar">
         <div class="nav-will">
@@ -77,17 +79,74 @@
         </div>
     </div>
 
-    <!--<div class="skills" style="padding-top: 10vw">
-        <div class="skills-wordglobe">
-            <span class="skills-wordglobe-Programming Languages">Programming Languages</span>
-            <span class="skills-wordglobe-ML Algorithms">ML Algorithms</span>
-            <span class="skills-wordglobe-Data Science">Data Science</span>
-            <span class="skills-wordglobe-Programming Skills">Programming Skills</span>
-            <span class="skills-wordglobe-Engineering">Engineering</span>
-            <span class="skills-wordglobe-Misc">Misc</span>
-        </div>
-    </div>-->
+    <div id="skills">
+        <span class="skills-wordglobe" id="programming-languages">Programming<br>Languages</span>
+        <span class="skills-wordglobe" id="ml-algorithms">Machine Learning<br>Algorithms</span>
+        <span class="skills-wordglobe" id="data-science">Data Science</span>
+        <span class="skills-wordglobe" id="programming-skills">Programming<br>Skills</span>
+        <span class="skills-wordglobe" id="engineering">Engineering</span>
+        <span class="skills-wordglobe" id="misc">Misc</span>
 
-    <script type="text/javascript" src="../javascript/webapp.js"></script>
+        <div class="skills-wordglobe-subset" id="programming-languages-subset">
+            <span class="skills-wordglobe-subset-word" style="font-size: 35px">Python</span>
+            <span class="skills-wordglobe-subset-word" style="font-size: 30px">Java</span>
+            <span class="skills-wordglobe-subset-word" style="font-size: 20px">C</span>
+            <span class="skills-wordglobe-subset-word" style="font-size: 25px">C++</span>
+            <span class="skills-wordglobe-subset-word" style="font-size: 25px">HTML/CSS</span>
+            <span class="skills-wordglobe-subset-word" style="font-size: 25px">Javascript</span>
+            <span class="skills-wordglobe-subset-word" style="font-size: 20px">SQL</span>
+            <span class="skills-wordglobe-subset-word" style="font-size: 20px">GMK</span>
+            <span class="skills-wordglobe-subset-word" style="font-size: 20px">Lua</span>
+            <span class="skills-wordglobe-subset-word" style="font-size: 15px">Assembly</span>
+
+        </div>
+
+        <div class="skills-wordglobe-subset" id="ml-algorithms-subset">
+            <span class="skills-wordglobe-subset-word" style="font-size: 25px">Reinforcement<br>Learning</span>
+            <span class="skills-wordglobe-subset-word" style="font-size: 30px">Gaussian<br>Process<br>Regression</span>
+            <span class="skills-wordglobe-subset-word" style="font-size: 35px">Neural<br>Networks</span>
+            <span class="skills-wordglobe-subset-word" style="font-size: 25px">Transformers</span>
+            <span class="skills-wordglobe-subset-word" style="font-size: 25px">Convolutional<br>Neural<br>Networks</span>
+            <span class="skills-wordglobe-subset-word" style="font-size: 20px">PCA</span>
+            <span class="skills-wordglobe-subset-word" style="font-size: 30px">Regressions</span>
+            <span class="skills-wordglobe-subset-word" style="font-size: 25px">Decision<br>Trees</span>
+            <span class="skills-wordglobe-subset-word" style="font-size: 30px">SVM</span>
+        </div>
+
+        <div class="skills-wordglobe-subset" id="data-science-subset">
+            <span class="skills-wordglobe-subset-word" style="font-size: 20px">Ethical Data Collection</span>
+            <span class="skills-wordglobe-subset-word" style="font-size: 35px">Training<br>Validation<br>Testing</span>
+            <span class="skills-wordglobe-subset-word" style="font-size: 25px">Confound<br>Avoidance</span>
+            <span class="skills-wordglobe-subset-word" style="font-size: 35px">Scientific<br>Method</span>
+            <span class="skills-wordglobe-subset-word" style="font-size: 30px">Statistical<br>Analysis</span>
+        </div>
+
+        <div class="skills-wordglobe-subset" id="programming-skills-subset">
+            <span class="skills-wordglobe-subset-word" style="font-size: 30px">Test Driven<br>Development</span>
+            <span class="skills-wordglobe-subset-word" style="font-size: 35px">Good<br>Comments</span>
+            <span class="skills-wordglobe-subset-word" style="font-size: 20px">Algorithms</span>
+            <span class="skills-wordglobe-subset-word" style="font-size: 20px">Data<br>Structures</span>
+            <span class="skills-wordglobe-subset-word" style="font-size: 15px">Database<br>Structure</span>
+            <span class="skills-wordglobe-subset-word" style="font-size: 25px">Codebase<br>Documentation</span>
+            <span class="skills-wordglobe-subset-word" style="font-size: 30px">GitHub</span>
+        </div>
+
+        <div class="skills-wordglobe-subset" id="engineering-subset">
+            <span class="skills-wordglobe-subset-word" style="font-size: 30px">Robotics</span>
+            <span class="skills-wordglobe-subset-word" style="font-size: 25px">Raspberry Pi</span>
+            <span class="skills-wordglobe-subset-word" style="font-size: 15px">Timeline<br>Mapping</span>
+            <span class="skills-wordglobe-subset-word" style="font-size: 20px">Product<br>Planning</span>
+            <span class="skills-wordglobe-subset-word" style="font-size: 30px">Quaternions</span>
+            <span class="skills-wordglobe-subset-word" style="font-size: 25px">PID<br>Loops</span>
+        </div>
+
+        <div class="skills-wordglobe-subset" id="misc-subset">
+            <span class="skills-wordglobe-subset-word" style="font-size: 20px">Microsoft<br>Office</span>
+            <span class="skills-wordglobe-subset-word" style="font-size: 25px">Game<br>Design</span>
+            <span class="skills-wordglobe-subset-word" style="font-size: 30px">Teaching</span>
+            <span class="skills-wordglobe-subset-word" style="font-size: 25px">Leadership</span>
+        </div>
+    </div>
+
 </body>
 </html>

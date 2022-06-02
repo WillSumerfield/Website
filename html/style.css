@@ -3,6 +3,10 @@
     padding: 0;
     box-sizing: border-box;
     font-size: 20px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 html{
@@ -36,6 +40,7 @@ html{
     height: 120px;
     width: 100%;
     font-family: Georgia, serif;
+    z-index:1000;
 }
 
 .nav-will{
@@ -108,7 +113,7 @@ html{
 
 .about-me{
     font-size: 10em;
-    padding-left: 10px;
+    padding-left: 20px;
 }
 
 .about-me-image{
@@ -129,6 +134,7 @@ html{
 .about-me-text{
     padding-top: 25px;
     padding-left: 25px;
+    padding-right: 25px;
     color: #888888;
     font-family: monospace, Monaco;
     line-height: 1.40em;
@@ -165,3 +171,28 @@ html{
 }
 
 /* endregion About me */
+
+/* region Skills */
+
+#skills{
+    padding: 25vh 30vw 25vh 30vw;
+    width: 100%;
+    height: 45vw;
+}
+
+.skills-wordglobe{
+    font-family: Lucida Console, monospace;
+    position: absolute;
+    font-size: 40px;
+    text-align: center;
+}
+
+.skills-wordglobe-subset-word
+{
+    font-family: Lucida Console, monospace;
+    position: absolute;
+    text-align: center;
+    color: hsla(0, 0%, 100%, 0)
+}
+
+/* endregion Skills */
